@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "handlers": {
+        "file": {
+            "level": "INFO",
+            "class": "logging.FileHandler",
+            "filename": "/Users/joro/code/djangoProject/logs/uvicorn.log",
+            "formatter": "verbose"
+        }
+    },
+    "loggers": {
+        "": {
+            "handlers": ["file"],
+            "level": "INFO",
+            "propagate": true
+        }
+    },
+    "formatters": {
+        "verbose": {
+            "format": "{name} {levelname} {asctime} {module} pid: {process:d} thread:{thread:d} {message}",
+            "style": "{"
+        },
+        "simple": {
+            "format": "{levelname} {message}",
+            "style": "{"
+        }
+    }
+}
