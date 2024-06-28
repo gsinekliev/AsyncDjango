@@ -3,7 +3,8 @@ from concurrent.futures import ThreadPoolExecutor
 
 from asgiref.sync import sync_to_async, async_to_sync
 from django.http import HttpResponse, HttpRequest
-from tasks import log_to_file, log_to_file_no_celery, async_sleep, sync_sleep
+from tasks import log_to_file
+from helpers import log_to_file_no_celery, async_sleep, sync_sleep
 
 import time
 
